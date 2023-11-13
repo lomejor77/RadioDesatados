@@ -51,4 +51,8 @@
     <string name="radio_desatados2">RADIO DESATADOS</string>
     <string name="desarrollado_por_alex_mu_oz_2023">Desarrollado por Alex Muñoz - 2023</string>
     <string name="desarrollado_por_alex_mu_oz_tm_radio_desatados_2023">Desarrollado por Alex Muñoz TM Radio Desatados 2023</string>
+    <string name="nav_header_desc" />
+    <string name="radio_title">RADIO DESATADOS</string>
+    <string name="pura_musica">Pura Musica</string>
+    <string name="djyuppi">djyuppi</string>
 </resources>
