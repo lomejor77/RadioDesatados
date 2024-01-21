@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import com.radiodesatados.radiodesatados.R
 import com.radiodesatados.radiodesatados.databinding.FragmentHomeBinding
@@ -41,7 +40,7 @@ class HomeFragment: Fragment() {
     }
 
     private fun Radio() {
-        this.audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        this.audioManager = requireContext().getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val url = "https://stream-150.zeno.fm/f0w58gzhrc9uv"
         MPlayer = MediaPlayer()
         MPlayer.setDataSource(url)
@@ -80,7 +79,7 @@ class HomeFragment: Fragment() {
             }
             binding.volumeId.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
                 override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, flags: 0)
+                    audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress,  0)
 
                 }
 
